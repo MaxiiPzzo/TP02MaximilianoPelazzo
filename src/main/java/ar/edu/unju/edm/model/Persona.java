@@ -2,20 +2,23 @@ package ar.edu.unju.edm.model;
 
 import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Persona {
 	private String nombre;
 	private String apellido;
-	private LocalDate fecha_nacimiento;
+	private LocalDate fechaNacimiento;
 	
 	public Persona() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Persona(String nombre, String apellido, LocalDate fecha_nacimiento) {
+	public Persona(String nombre, String apellido, LocalDate fechaNacimiento) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.fecha_nacimiento = fecha_nacimiento;
+		this.fechaNacimiento = fechaNacimiento;
 	}
 	
 	public String getNombre() {
@@ -35,11 +38,11 @@ public class Persona {
 	}
 	
 	public LocalDate getFechaNacimiento() {
-		return fecha_nacimiento;
+		return fechaNacimiento;
 	}
 	
-	public void setFechaNacimiento(LocalDate fecha_nacimiento) {
-		this.fecha_nacimiento = fecha_nacimiento;
+	public void setFechaNacimiento(LocalDate fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
 	}
 	
 }
