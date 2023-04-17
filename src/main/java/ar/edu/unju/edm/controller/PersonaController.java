@@ -4,12 +4,33 @@ import java.time.LocalDate;
 import java.time.Period;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import ar.edu.unju.edm.model.Persona;
 
 @Controller
 public class PersonaController {
-
-	public PersonaController() {
-		// TODO Auto-generated constructor stub
+	
+	@GetMapping({"/","/index","/persona"})
+	public ModelAndView cargarPersona() {
+		Persona nuevaPersona = new Persona();
+		
+		ModelAndView modelAndView = new ModelAndView("persona");
+		modelAndView.addObject("persona", nuevaPersona);
+		
+		return modelAndView;
+	}
+	
+	@PostMapping("/guardarPersona")
+	public ModelAndView guardarPersona(@ModelAttribute("persona") Persona personaGuardar) {
+	
+		ModelAndView modelAndView = new ModelAndView("perfilPersona");
+		modelAndView.addObject("persona", personaGuardar);
+		
+		return modelAndView;
 	}
 	
 	public Integer determinarEdad(LocalDate fechaNacimiento) {
