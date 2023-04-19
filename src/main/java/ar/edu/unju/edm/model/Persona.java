@@ -9,6 +9,9 @@ public class Persona {
 	private String nombre;
 	private String apellido;
 	private LocalDate fechaNacimiento;
+	private Integer edad;
+	private String signoZodiaco;
+	private String estacion;
 	
 	public Persona() {
 		// TODO Auto-generated constructor stub
@@ -44,5 +47,30 @@ public class Persona {
 	public void setFechaNacimiento(LocalDate fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
+	
+	public Integer getEdad() {
+		return edad;
+	}
+	
+	public void setEdad(Integer edad) {
+		this.edad = edad;
+	}
+	
+	public String getSignoZodiaco() {
+		return signoZodiaco;
+	}
+	
+	public void setSignoZodiaco(String signoZodiaco) {
+		this.signoZodiaco = signoZodiaco;
+	}
+	
+	public String getEstacion() {
+		return estacion;
+	}
+	
+	public void setEstacion(String estacion) {
+		this.estacion = estacion;
+	}
+	
 	
 }

@@ -26,7 +26,9 @@ public class PersonaController {
 	
 	@PostMapping("/guardarPersona")
 	public ModelAndView guardarPersona(@ModelAttribute("persona") Persona personaGuardar) {
-	
+		personaGuardar.setSignoZodiaco(determinarSignoZodiacal(personaGuardar.getFechaNacimiento()));
+		personaGuardar.setEdad(determinarEdad(personaGuardar.getFechaNacimiento()));
+		personaGuardar.setEstacion(determinarEstacion(personaGuardar.getFechaNacimiento()));
 		ModelAndView modelAndView = new ModelAndView("perfilPersona");
 		modelAndView.addObject("persona", personaGuardar);
 		
@@ -48,7 +50,7 @@ public class PersonaController {
 			dia--;
 		
 		if( dia<=20 || dia>=355)
-			return ("capricorno");
+			return ("capricorni o");
 		else if( dia<=51 ) 
 			return ("acuario");
 		else if( dia<=79 ) 
