@@ -2,9 +2,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Proceso String</title>
 </head>
 <body>
-
+	<form th:object="${procesoString}" th:action="@{/guardarProcesoString}" method="post">
+		<label for="ffcadena">Cadena: </label><br>
+		<input type="text" id="ffcadena" th:field="*{cadena}"><br>
+		<input type="submit" value="Ingresar">
+	</form>
 </body>
 </html>

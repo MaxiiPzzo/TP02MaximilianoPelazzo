@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Resultado Cadena</title>
+</head>
+<body>
+	<div th:object = "${procesoString}" class="box">
+		<h3>Cadena: <span th:utext="*{cadena}"></span></h3>
+  		<p><span th:utext="*{mensaje1}"></span></p>
+  		<p>Cadena invertida: <span th:utext="*{cadenaInvertida}"></span></p>
+  		<p><span th:utext="*{mensaje2}"></span></p>
+	</div>
+</body>
+</html>
