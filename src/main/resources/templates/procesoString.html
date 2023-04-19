@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 <title>Proceso String</title>
 </head>
 <body>
+	<h1>Manipulación de STRINGS</h1>
 	<form th:object="${procesoString}" th:action="@{/guardarProcesoString}" method="post">
 		<label for="ffcadena">Cadena: </label><br>
-		<input type="text" id="ffcadena" th:field="*{cadena}"><br>
+		<input type="text" id="ffcadena" th:field="*{cadena}"><br><br>
 		<input type="submit" value="Ingresar">
 	</form>
 </body>

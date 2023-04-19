@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 <title>Proceso Fecha</title>
 </head>
 <body>
+	<h1>Comparación de FECHAS</h1>
 	<form th:object="${procesoFecha}" th:action="@{/guardarProcesoFecha}" method="post">
 		<label for="ffecha1">Fecha1: </label><br>
 		<input type="date" id="ffecha1" th:field="*{fecha1}"><br>
 		<label for="ffecha2">Fecha2: </label><br>
-		<input type="date" id="ffecha2" th:field="*{fecha2}"><br>
+		<input type="date" id="ffecha2" th:field="*{fecha2}"><br><br>
 		<input type="submit" value="Ingresar">
 	</form>
 </body>

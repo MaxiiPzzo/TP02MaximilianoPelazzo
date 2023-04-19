@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 <title>Listado</title>
 </head>
 <body>
+	<h1>Resultado PERSONA</h1>
 	<form th:object="${persona}" >
 		<label for="fnombre">Nombre:</label><br>
-		<input type="text" id="fnombre" th:field="*{nombre}"><br>
+		<input type="text" id="fnombre" th:field="*{nombre}" disabled><br>
 		<label for="fapellido">Apellido:</label><br>
-		<input type="text" id="fapellido" th:field="*{apellido}"><br>
+		<input type="text" id="fapellido" th:field="*{apellido}" disabled><br>
 		<label for="ffechanacimiento">Fecha Nacimiento:</label><br>
-		<input type="text" id="ffechanacimiento" th:field="*{fechaNacimiento}"><br>
+		<input type="text" id="ffechanacimiento" th:field="*{fechaNacimiento}" disabled><br>
 		<label for="fedad">Edad:</label><br>
-		<input type="text" id="fedad" th:field="*{edad}"><br>
+		<input type="text" id="fedad" th:field="*{edad}" disabled><br>
 		<label for="fsignoZodiaco">Signo Zodiacal:</label><br>
-		<input type="text" id="fsignoZodiaco" th:field="*{signoZodiaco}"><br>
-		<label for="festacion">Estación:</label><br>
-		<input type="text" id="festacion" th:field="*{estacion}"><br>
+		<input type="text" id="fsignoZodiaco" th:field="*{signoZodiaco}" disabled><br>
+		<label for="festacion">EstaciÃ³n:</label><br>
+		<input type="text" id="festacion" th:field="*{estacion}" disabled><br>
 	</form>
 </body>
 </html>
