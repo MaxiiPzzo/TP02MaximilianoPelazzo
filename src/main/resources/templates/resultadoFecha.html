@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:object="${procesoFecha}">
+		<label for="ffecha1">Fecha1: </label><br>
+		<input type="text" id="ffecha1" th:field="*{fecha1}"><br>
+		<label for="ffecha2">Fecha2: </label><br>
+		<input type="text" id="ffecha2" th:field="*{fecha2}"><br>
+		<input type="text" id="fmensaje1" th:field="*{mensaje1}"><br>
+		<input type="text" id="fmensaje2" th:field="*{mensaje2}"><br>
+	</form>
+</body>
+</html>
